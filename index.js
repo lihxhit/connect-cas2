@@ -18,6 +18,7 @@ var DEFAULT_OPTIONS = {
   match: [],
   servicePrefix: '',
   serverPath: '',
+  explicitArray:true,
   paths: {
     validate: '/cas/validate',
     serviceValidate: '/cas/serviceValidate',
