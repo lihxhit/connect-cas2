@@ -207,11 +207,11 @@ ConnectCas.prototype.core = function() {
     });
 
     if (method === 'GET') {
-      switch (pathname) {
-        case options.paths.validate:
-          return validate(req, res, doNext, options);
-        case that.proxyCallbackPathName:
-          return proxyCallback(req, doNext, options);
+      if(pathname===that.proxyCallbackPathName){
+        return proxyCallback(req, doNext, options);
+      }
+      if(req.query.ticket){
+        return validate(req,res,doNext,options);
       }
     }
     else if (method === 'POST' && pathname === options.paths.validate && options.slo) {
