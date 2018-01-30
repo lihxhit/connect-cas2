@@ -249,8 +249,8 @@ ConnectCas.prototype.logout = function() {
     }
 
     // Send the user to the official campus-wide logout URL
-    if(typeof options.path.logout!=='string'){
-      return res.redirect(options.path.logout(req,options));
+    if(typeof options.paths.logout!=='string'){
+      return res.redirect(options.paths.logout(req,options));
     }
     return res.redirect(utils.getPath('logout', options));
   };
