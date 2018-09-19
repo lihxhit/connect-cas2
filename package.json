@@ -1,7 +1,7 @@
 {
-  "author": "TencentWSRD",
+  "author": "lihxhit",
   "bugs": {
-    "url": "https://github.com/TencentWSRD/connect-cas2/issues"
+    "url": ""
   },
   "dependencies": {
     "co": "^4.6.0",
@@ -49,5 +49,5 @@
     "start": "node ./example",
     "test": "istanbul cover -x 'example/**' _mocha -- -R spec"
   },
-  "version": "1.2.5"
+  "version": "1.0.0"
 }
