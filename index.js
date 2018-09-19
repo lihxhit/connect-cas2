@@ -218,7 +218,7 @@ ConnectCas.prototype.core = function() {
       return slo(req, doNext, options);
     }
 
-    return authenticate(req, doNext, options);
+    return authenticate(req, res,doNext, options);
 
     function doNext(callback) {
       if (options.hooks && typeof options.hooks.after === 'function') {
